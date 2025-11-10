@@ -5,9 +5,9 @@ services:
     image: postgres:15
     container_name: securitymodel_postgres
     environment:
-      POSTGRES_DB: secmodel
+      POSTGRES_DB: postgres
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: n7cuellar
+      POSTGRES_PASSWORD: 123456
     ports:
       - "5432:5432"
     volumes:

@@ -2,12 +2,14 @@ package com.example.store.infrastructure.controller;
 
 import com.example.store.application.dto.ProductDTO;
 import com.example.store.application.service.ProductService;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@PreAuthorize("hasRole('Admin')")
 @RequestMapping("/api/products")
 public class ProductController {
 

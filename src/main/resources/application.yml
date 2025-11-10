@@ -2,13 +2,13 @@ spring:
   application:
     name: SecurityModel
   profiles:
-    active: postgresql
+    active: mysql
   
   # Configuración base (fallback)
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
-    password: n7cuellar
+    password: 123456
     driver-class-name: org.postgresql.Driver
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
@@ -49,7 +49,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/securitymodel
     username: root
-    password: n7cuellar
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     database-platform: org.hibernate.dialect.MySQLDialect
@@ -65,7 +65,7 @@ spring:
   datasource:
     url: jdbc:sqlserver://localhost:1433;databaseName=securitymodel;encrypt=false
     username: sa
-    password: n7cuellar
+    password: 123456
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
     database-platform: org.hibernate.dialect.SQLServerDialect

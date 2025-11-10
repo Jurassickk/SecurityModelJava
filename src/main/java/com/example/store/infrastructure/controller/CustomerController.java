@@ -3,11 +3,13 @@ package com.example.store.infrastructure.controller;
 import com.example.store.application.dto.CustomerDTO;
 import com.example.store.application.service.CustomerService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@PreAuthorize("hasRole('Admin')")
 @RequestMapping("/api/customers")
 public class CustomerController {
 

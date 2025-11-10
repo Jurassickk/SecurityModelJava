@@ -2,10 +2,13 @@ package com.example.security.infrastructure.controller;
 
 import com.example.security.application.dto.RoleDTO;
 import com.example.security.application.service.GenericCrudService;
+
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@PreAuthorize("hasRole('Admin')")
 @RequestMapping("/api/roles")
 public class RoleController extends BaseController<RoleDTO, Long>{
 

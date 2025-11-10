@@ -6,7 +6,7 @@ services:
     container_name: securitymodel_sqlserver
     environment:
       ACCEPT_EULA: Y
-      MSSQL_SA_PASSWORD: StrongPassword123!
+      MSSQL_SA_PASSWORD: 123456
       MSSQL_PID: Express
     ports:
       - "1433:1433"
